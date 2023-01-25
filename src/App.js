@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
+import "./App.css"
 import TodoList from './TodoList'
 import { v4 as uuidv4 } from 'uuid' //to generates random id
 
@@ -44,11 +45,13 @@ function App() {
   return (
     //Fragment (to return more than one thing)
     <>
-      <TodoList todos={todos} toggleTodo={toggleTodo} />
-      <input ref={todoNameRef} type='text' />
-      <button onClick={handleAddTodo}>Add Todo</button>
-      <button onClick={handleClearTodos}>Clear Complete</button>
-      <div>{todos.filter(todo => !todo.complete).length} left to do</div>
+      <div className="todo-app">
+        <TodoList todos={todos} toggleTodo={toggleTodo} />
+        <input ref={todoNameRef} type='text' />
+        <button onClick={handleAddTodo}>Add Todo</button>
+        <button onClick={handleClearTodos}>Clear Complete</button>
+        {/* <div>{todos.filter(todo => !todo.complete).length} left to do</div> */}
+      </div>
     </>
   )
 }
