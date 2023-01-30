@@ -13,7 +13,6 @@ export default function TodoList() {
     setTodos(newTodos)
   }
 
-
   const updateTodo = (todoId, newValue) => {
     if (!newValue.text || /^\s*$/.test(newValue.text)) {
       return
@@ -25,7 +24,6 @@ export default function TodoList() {
     const removeArr = [...todos].filter(todo => todo.id !== id)
     setTodos(removeArr)
   }
-
 
   const completeTodo = id => {
     let updatedTodos = todos.map(todo => {

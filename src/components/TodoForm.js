@@ -19,7 +19,6 @@ export default function TodoForm(props) {
     props.onSubmit({
       id: uuidv4(),
       text: input,
-      // completed: false
     })
     setInput('')
   }
@@ -57,11 +56,6 @@ export default function TodoForm(props) {
             </>
           )
         }
-
-
-
-
-
       </form>
     </div>
   )
